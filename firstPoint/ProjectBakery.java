@@ -31,9 +31,8 @@ public class ProjectBakery {
         int howManyPeolple = iScanner.nextInt();
         System.out.println(howManyPeolple);
 
-        System.out.printf("Hi that's your order: %d %s for %d persons please",
+        System.out.printf("Hi that's your order: %d %s for %d persons please\n",
         howMany, order, howManyPeolple);
-        System.out.println();
         System.out.printf("Hi that's your order: " + howMany + " " + order + " for " + howManyPeolple
         + " persons please");
         iScanner.close();
