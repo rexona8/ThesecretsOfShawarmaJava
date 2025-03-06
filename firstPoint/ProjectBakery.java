@@ -33,6 +33,9 @@ public class ProjectBakery {
 
         System.out.printf("Hi that's your order: %d %s for %d persons please",
         howMany, order, howManyPeolple);
+        System.out.println();
+        System.out.printf("Hi that's your order: " + howMany + " " + order + " for " + howManyPeolple
+        + " persons please");
         iScanner.close();
     }
 }
