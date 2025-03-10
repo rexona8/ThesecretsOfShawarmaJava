@@ -15,9 +15,11 @@ public class TheCallingForInvest {
 
         System.out.print("Input your name: ");
         String name = scanner.nextLine();
+        
         LocalDateTime dateTime = LocalDateTime.now();
         int Hour = dateTime.getHour();
         String timeOfDay = "";
+
         if (Hour >= 5 && Hour < 12){
             timeOfDay = "Good morning, ";
         }
@@ -27,10 +29,10 @@ public class TheCallingForInvest {
         else if (Hour >= 18 && Hour < 23){
             timeOfDay = "Good evening, ";
         }
-        else
+        else // для ночного времени (с 23:00 до 5:00)
             timeOfDay = "Good night, ";
         
-    System.out.printf("%s%s!", timeOfDay,name);
-    scanner.close(); // Закрываем scanner, чтобы избежать утечек памяти
+        System.out.printf("%s%s!", timeOfDay,name);
+        scanner.close(); // Закрываем scanner, чтобы избежать утечек памяти
     }
 }
