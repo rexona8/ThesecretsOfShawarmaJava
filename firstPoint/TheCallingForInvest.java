@@ -1,4 +1,5 @@
 package firstPoint;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class TheCallingForInvest {
@@ -14,5 +15,22 @@ public class TheCallingForInvest {
 
         System.out.print("Input your name: ");
         String name = scanner.nextLine();
+        LocalDateTime dateTime = LocalDateTime.now();
+        int Hour = dateTime.getHour();
+        String TimeDay = "";
+        if (Hour >= 5 && Hour < 12){
+            TimeDay = "Good morning, ";
+        }
+        if (Hour >= 12 && Hour < 18){
+            TimeDay = "Good afternoon, ";
+        }
+        if (Hour >= 18 && Hour < 23){
+            TimeDay = "Good evening, ";
+        }
+        if (Hour < 5 || Hour == 23){
+            TimeDay = "Good night, ";
+        }
+    System.out.printf("%s%s!", TimeDay,name);
+    scanner.close(); // Закрываем scanner, чтобы избежать утечек памяти
     }
 }
