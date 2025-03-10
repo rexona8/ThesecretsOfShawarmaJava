@@ -27,9 +27,9 @@ public class TheCallingForInvest {
         else if (Hour >= 18 && Hour < 23){
             timeOfDay = "Good evening, ";
         }
-        if (Hour < 5 || Hour == 23){
+        else
             timeOfDay = "Good night, ";
-        }
+        
     System.out.printf("%s%s!", timeOfDay,name);
     scanner.close(); // Закрываем scanner, чтобы избежать утечек памяти
     }
