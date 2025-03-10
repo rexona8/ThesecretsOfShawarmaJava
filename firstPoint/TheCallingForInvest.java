@@ -21,10 +21,10 @@ public class TheCallingForInvest {
         if (Hour >= 5 && Hour < 12){
             TimeDay = "Good morning, ";
         }
-        if (Hour >= 12 && Hour < 18){
+        else if (Hour >= 12 && Hour < 18){
             TimeDay = "Good afternoon, ";
         }
-        if (Hour >= 18 && Hour < 23){
+        else if (Hour >= 18 && Hour < 23){
             TimeDay = "Good evening, ";
         }
         if (Hour < 5 || Hour == 23){
