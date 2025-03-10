@@ -17,20 +17,20 @@ public class TheCallingForInvest {
         String name = scanner.nextLine();
         LocalDateTime dateTime = LocalDateTime.now();
         int Hour = dateTime.getHour();
-        String TimeDay = "";
+        String timeOfDay = "";
         if (Hour >= 5 && Hour < 12){
-            TimeDay = "Good morning, ";
+            timeOfDay = "Good morning, ";
         }
         else if (Hour >= 12 && Hour < 18){
-            TimeDay = "Good afternoon, ";
+            timeOfDay = "Good afternoon, ";
         }
         else if (Hour >= 18 && Hour < 23){
-            TimeDay = "Good evening, ";
+            timeOfDay = "Good evening, ";
         }
         if (Hour < 5 || Hour == 23){
-            TimeDay = "Good night, ";
+            timeOfDay = "Good night, ";
         }
-    System.out.printf("%s%s!", TimeDay,name);
+    System.out.printf("%s%s!", timeOfDay,name);
     scanner.close(); // Закрываем scanner, чтобы избежать утечек памяти
     }
 }
