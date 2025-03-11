@@ -1,4 +1,4 @@
-package firstPoint;
+package FirstPoint;
 
 import java.util.Scanner;
 

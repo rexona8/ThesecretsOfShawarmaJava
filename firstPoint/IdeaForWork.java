@@ -1,4 +1,4 @@
-package firstPoint;
+package FirstPoint;
 
 public class IdeaForWork {
     public static void HowNumbers(int value) {
