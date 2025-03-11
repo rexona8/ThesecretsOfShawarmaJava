@@ -10,8 +10,8 @@ public class ProjectBakery {
         while (true){
             System.out.printf("Input your order: ");
             order = iScanner.nextLine();
-            if (order.matches("[a-zA-Z ]+")){
-                break;
+            if (order.matches("[a-zA-Z ]+")){ // добавляем проверку с помощью matches
+                break; // чтобы пользователь вводил только буквы, название
             }
             else {
                 System.out.println("If you want to place an order, enter the order name");
@@ -20,14 +20,14 @@ public class ProjectBakery {
     
         System.out.printf("Input how many orders: ");
         int howMany = 0;
-        while (!iScanner.hasNextInt()){
+        while (!iScanner.hasNextInt()){ // hasNextInt в классе iScanner проверяет, что число вводится
             System.out.printf("Input how many orders: ");
-            iScanner.next();
+            iScanner.next(); // проверяем, чтобы пользователь вводил колличесво (число)
         }
         howMany = iScanner.nextInt();
         System.out.printf("Enter how many people: ");
-        boolean flag = iScanner.hasNextInt();
-        System.out.println(flag);
+        boolean flag = iScanner.hasNextInt(); // булевый hasNextInt в классе iScanner проверяет, 
+        System.out.println(flag); // что число вводится
         int howManyPeolple = iScanner.nextInt();
         System.out.println(howManyPeolple);
 
