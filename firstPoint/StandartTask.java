@@ -23,5 +23,6 @@ public class StandartTask {
     int numberDegree = (int) Math.pow(number, degree); // вариант намного проще, функция
 
     System.out.printf("%d в %d степени будет равно %d", number, degree, numberDegree);
+    scanner.close();
     }
 }
