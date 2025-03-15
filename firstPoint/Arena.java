@@ -1,20 +1,25 @@
 package FirstPoint;
 
-import java.util.Random;
-// import java.util.Scanner;
+// import java.util.Random;
+import java.util.Scanner;
 
 public class Arena {
     public static void main(String[] args) {
-        // Scanner scanner = new Scanner(System.in);
-        // System.out.print("Input number: ");
-        // int number = scanner.nextInt();
-        // scanner.close();
-        Random random = new Random();
-        int randNum = random.nextInt(100);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input number 1 and 2: ");
+        int number1 = scanner.nextInt();
+        int number2 = scanner.nextInt();
+        int result = number1 % number2;
 
-        System.out.println(randNum);
-        System.out.printf("Случайное число: %d. Первая цифра (десятки): %d. Вторая цифра (единицы): %d. Наибольшая цифра: %d.", 
-                          randNum, randNum / 10, randNum % 10, Math.max(randNum / 10, randNum % 10));
+        if (number2 == 0){
+            System.out.print("Ошибка: деление на ноль!");
+        }
+        else{
+            System.out.print(result == 0 ? "Число 2 кратно 1 числу" : 
+            "Не кратно, остаток от деления равен " + result);
+        }
 
+        
+        scanner.close();
     }
 }
