@@ -1,7 +1,7 @@
 package FirstPoint;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+// import java.util.ArrayList;
+// import java.util.Arrays;
 // import java.util.Random;
 import java.util.Scanner;
 
@@ -27,21 +27,15 @@ public class Arena {
         scanner.close();
     }
 
-    public static int[] numArray(int number){ // метод перевода числа через массив с помощью коллекции
-        ArrayList<Integer> list = new ArrayList<>();
-        int val = number;
-
-        while (val > 0){
-            list.add(val % 10);
-            val /=10 ;
+    public static int[] numArray(int number) {
+        int length = (int) Math.log10(number) + 1; // Количество цифр в числе
+        int[] result = new int[length];
+    
+        for (int i = length - 1; i >= 0; i--) {
+            result[i] = number % 10; // Берем последнюю цифру
+            number /= 10; // Убираем последнюю цифру
         }
-
-        int size = list.size();
-        int[] result = new int[size];
-        for (int i = 0; i < size; i++){
-            result[i] = list.get(size - 1 - i);
-        }
-
+    
         return result;
     }
 
