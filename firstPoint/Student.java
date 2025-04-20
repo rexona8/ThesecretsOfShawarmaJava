@@ -47,6 +47,6 @@ class StudentTest {
 
         System.out.println("Nikita average ball = " + allAvstudent1);
         System.out.println("Bogdan average ball = " + allAvstudent2);
-        System.out.println("John average ball = " + allAvstudent3);
+        System.out.print("John average ball = " + allAvstudent3);
     }
 }
