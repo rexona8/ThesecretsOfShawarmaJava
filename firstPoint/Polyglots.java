@@ -1,10 +1,12 @@
+package FirstPoint;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Set; // это интерфейс, который позволяет использовать коллекцию Set - беспорядочный список, в котором легко искать, добавлять и даулять элементы
-import java.util.HashSet; // это класс, инструмент, с помощью которого реализуются коллекции Set, с HashSet ещё проще искать, добавлять и удалять элементы
+import java.util.HashSet; // это интерфейс, который позволяет использовать коллекцию Set - беспорядочный список, в котором легко искать, добавлять и даулять элементы
+import java.util.Set; // это класс, инструмент, с помощью которого реализуются коллекции Set, с HashSet ещё проще искать, добавлять и удалять элементы
 import java.util.TreeSet; // ещё класс, инструмент, который реализует в Set элементы по порядку и использует диапазоны между элементами
 
 
