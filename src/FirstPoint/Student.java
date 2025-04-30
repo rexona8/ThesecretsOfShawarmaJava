@@ -1,6 +1,7 @@
 package FirstPoint;
 
 public class Student {
+
     long idcardNumber;
     String name;
     String surname;
@@ -11,6 +12,13 @@ public class Student {
 }
 
 class StudentTest {
+
+    double averageScore (Student st) {
+        double average = (double) (st.mathAvScore + st.econAvScore + st.langAvScore) / 3;
+        System.out.println("Средняя оценка студента " + st.name + " " + st.surname + ": " + average);
+        return average;
+    }
+
     public static void main (String[] args) {
         Student student1 = new Student();
         student1.idcardNumber = 1033;
@@ -43,10 +51,9 @@ class StudentTest {
         student3.econAvScore = 5;
         student3.langAvScore = 2;
 
-        double allAvstudent3 = (double) (student3.mathAvScore + student3.econAvScore + student3.langAvScore) / 3.0;
-
-        System.out.println("Nikita average ball = " + allAvstudent1);
-        System.out.println("Bogdan average ball = " + allAvstudent2);
-        System.out.print("John average ball = " + allAvstudent3);
+        StudentTest studentTest = new StudentTest();
+        studentTest.averageScore(student1);
+        studentTest.averageScore(student2);
+        studentTest.averageScore(student3);
     }
 }
