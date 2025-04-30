@@ -15,7 +15,10 @@ class StudentTest {
 
     double averageScore (Student st) {
         double average = (double) (st.mathAvScore + st.econAvScore + st.langAvScore) / 3;
+        System.out.println("Номер в картотеке: " + st.idcardNumber);
+        System.out.println("Год обучения: " + st.year);
         System.out.println("Средняя оценка студента " + st.name + " " + st.surname + ": " + average);
+        System.out.println();
         return average;
     }
 
@@ -28,8 +31,6 @@ class StudentTest {
         student1.mathAvScore = 4;
         student1.econAvScore = 4;
         student1.langAvScore = 5;
-
-        double allAvstudent1 = (double) (student1.mathAvScore + student1.econAvScore + student1.langAvScore) / 3.0;
     
         Student student2 = new Student();
         student2.idcardNumber = 1455;
@@ -39,8 +40,6 @@ class StudentTest {
         student2.mathAvScore = 3;
         student2.econAvScore = 2;
         student2.langAvScore = 2;
-
-        double allAvstudent2 = (double) (student2.mathAvScore + student2.econAvScore + student2.langAvScore) / 3.0;
     
         Student student3 = new Student();
         student3.idcardNumber = 997;
