@@ -2,29 +2,36 @@ package FirstPoint;
 
 public class Employee {
 
-    int id;
+    public int id;
     String surname;
     int age;
-    double salary;
+    private double salary;
     String department;
 
-    Employee (int id, String surname, int age, double salary, String department) {
-        this.id = id;
-        this.surname = surname;
-        this.age = age;
-        this.salary = salary;
-        this.department = department;
+    double SalaryPrintX2(double salary2) {
+        salary = salary2;
+        salary2 *= 2;
+        return salary2;
     }
 
-    double plusSalary (double summ) {
-        return summ * 2;
+    void SurnamePrint(String surname2) {
+        surname = surname2;
+        System.out.println(surname2);
+    }
+
+    void IdPrint(int id2) {
+        id = id2;
+        System.out.println(id2);
     }
 
     class EmployeeTest {
-        public static void main (String[] args) {
-            Employee employee = new Employee(522, "Maikov", 32, 50055.45, "Labor protection");
-            employee.salary = employee.plusSalary(employee.salary);
-            System.out.println("Hi, new salary: " + employee.surname + " " + employee.salary);
+
+        public static void main(String[] args) {
+            Employee emp = new Employee();
+            double salaryX2 = emp.SalaryPrintX2(500.1);
+            System.out.println(salaryX2);
+            emp.SurnamePrint("Bygrov");
+            emp.IdPrint(55);
         }
     }
 }
