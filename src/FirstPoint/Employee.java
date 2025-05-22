@@ -1,37 +1,61 @@
 package FirstPoint;
 
+// public class Employee {
+
+//     static int Multiply(int a, int b, int c) {
+//         int res = a * b * c;
+//         return res;
+//     }
+
+//     static void SplitPrint(int a, int b) {
+//         int res = a / b;
+//         System.out.println(res);
+//     }
+
+//     class EmployeeTest {
+
+//         public static void main(String[] args) {
+//             int a = 10;
+//             int b = 5;
+//             int c = 45;
+
+//             System.out.println(Multiply(a, b, c));
+//             SplitPrint(a, b);
+//         }
+
+//     }
+// }
+
 public class Employee {
 
-    public int id;
-    String surname;
-    int age;
-    private double salary;
-    String department;
+    public static final double PI = 3.14;
 
-    double SalaryPrintX2(double salary2) {
-        salary = salary2;
-        salary2 *= 2;
-        return salary2;
+    double AreaCircle(double r) {
+        double area = PI * (r * r);
+        return area;
+    }    
+
+    static double CircumferenceLength(double r) {
+        double lehgth = 2 * PI * r;
+        return lehgth;
     }
 
-    void SurnamePrint(String surname2) {
-        surname = surname2;
-        System.out.println(surname2);
-    }
-
-    void IdPrint(int id2) {
-        id = id2;
-        System.out.println(id2);
-    }
-
+    public void PrintInfo(double r) {
+        System.out.println(AreaCircle(r));
+        System.out.println(CircumferenceLength(r));
+        System.out.println(r);
+    }  
+        
     class EmployeeTest {
 
         public static void main(String[] args) {
-            Employee emp = new Employee();
-            double salaryX2 = emp.SalaryPrintX2(500.1);
-            System.out.println(salaryX2);
-            emp.SurnamePrint("Bygrov");
-            emp.IdPrint(55);
+
+            Employee employee = new Employee();
+
+            double area = employee.AreaCircle(2);
+            double lehgth = CircumferenceLength(2);
+            employee.PrintInfo(2);
         }
+
     }
 }
