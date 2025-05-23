@@ -46,7 +46,9 @@ public class Employee {
         System.out.println(r);
     }  
         
-    class EmployeeTest {
+    public static class EmployeeTest {
+
+        public static int Z = 12;
 
         public static void main(String[] args) {
 
