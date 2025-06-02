@@ -4,10 +4,10 @@ public class Delivery {
     String colorCar;
     String model;
     double numOfOrders;
-    String nameDriver;
-    double timeWork;
+    public String nameDriver;
+    public double timeWork;
 
-    Delivery (String colorCar, String model, double numOfOrders, String nameDriver, double timeWork) {
+    public Delivery (String colorCar, String model, double numOfOrders, String nameDriver, double timeWork) {
         this.colorCar = colorCar;
         this.model = model;
         this.numOfOrders = numOfOrders;
