@@ -32,5 +32,6 @@ public class Arena {
         dayOfmonth(2);
         dayOfmonth(12);
         dayOfmonth(4);
+        dayOfmonth(22);
     }
 }
