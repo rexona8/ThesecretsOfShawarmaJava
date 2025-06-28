@@ -1,13 +1,8 @@
 package FirstPoint;
 
-import java.util.Scanner;
-
 public class Arena {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
-        System.out.print("Input number of month 2025: ");
-        int month = scanner.nextInt();
 
+    public static void dayOfmonth(int month) {
         switch (month) {
             case 1:
             case 3:
@@ -16,19 +11,26 @@ public class Arena {
             case 8:
             case 10:
             case 12:
-            System.out.println("31 days in a month");
-            break;
+                System.out.println("31 days in a month");
+                break;
             case 4:
             case 6:
             case 9:
             case 11:
-            System.out.println("30 days in a month");
-            break;
+                System.out.println("30 days in a month");
+                break;
             case 2:
-            System.out.println("28 days in a month");
-            break;
+                System.out.println("28 days in a month");
+                break;
             default:
-            System.out.println("There is no such month");
+                System.out.println("There is no such month");
         }
+    }
+
+    public static void main(String[] args) {
+        dayOfmonth(5);
+        dayOfmonth(2);
+        dayOfmonth(12);
+        dayOfmonth(4);
     }
 }
